@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-gm-IFa">
+                                <rect key="frame" x="16" y="60" width="125" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="bdC-Qj-sao"/>
+                                    <constraint firstAttribute="width" secondItem="4ig-gm-IFa" secondAttribute="height" multiplier="167:160" id="iKS-OG-d8A"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uYf-fg-jpv">
+                                <rect key="frame" x="149" y="60" width="249" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQH-mJ-7uf">
+                                <rect key="frame" x="149" y="103" width="249" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="폰번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1G2-b8-Wih">
+                                <rect key="frame" x="149" y="146" width="249" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ya3-11-uPD">
+                                <rect key="frame" x="16" y="196" width="382" height="650"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uYf-fg-jpv" firstAttribute="top" secondItem="4ig-gm-IFa" secondAttribute="top" id="9QQ-dP-6uM"/>
+                            <constraint firstItem="4ig-gm-IFa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BlW-Ff-d6q"/>
+                            <constraint firstItem="ya3-11-uPD" firstAttribute="leading" secondItem="4ig-gm-IFa" secondAttribute="leading" id="HBq-eL-J1V"/>
+                            <constraint firstItem="uYf-fg-jpv" firstAttribute="leading" secondItem="4ig-gm-IFa" secondAttribute="trailing" constant="8" id="R0i-Nh-CAd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uYf-fg-jpv" secondAttribute="trailing" constant="16" id="Zyv-4B-Xat"/>
+                            <constraint firstItem="ya3-11-uPD" firstAttribute="top" secondItem="4ig-gm-IFa" secondAttribute="bottom" constant="16" id="b77-2c-jc4"/>
+                            <constraint firstItem="4ig-gm-IFa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="cMk-wi-j9o"/>
+                            <constraint firstItem="1G2-b8-Wih" firstAttribute="bottom" secondItem="4ig-gm-IFa" secondAttribute="bottom" id="e44-bR-1Hb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ya3-11-uPD" secondAttribute="bottom" constant="16" id="har-Fl-tZY"/>
+                            <constraint firstItem="uYf-fg-jpv" firstAttribute="top" secondItem="4ig-gm-IFa" secondAttribute="top" id="j5A-84-QPv"/>
+                            <constraint firstItem="1G2-b8-Wih" firstAttribute="trailing" secondItem="ya3-11-uPD" secondAttribute="trailing" id="lag-ZQ-tZi"/>
+                            <constraint firstItem="1G2-b8-Wih" firstAttribute="trailing" secondItem="GQH-mJ-7uf" secondAttribute="trailing" id="lh1-xg-zJH"/>
+                            <constraint firstItem="GQH-mJ-7uf" firstAttribute="leading" secondItem="uYf-fg-jpv" secondAttribute="leading" id="nEk-sP-cEA"/>
+                            <constraint firstItem="1G2-b8-Wih" firstAttribute="leading" secondItem="GQH-mJ-7uf" secondAttribute="leading" id="p2Z-Js-kc7"/>
+                            <constraint firstItem="GQH-mJ-7uf" firstAttribute="trailing" secondItem="uYf-fg-jpv" secondAttribute="trailing" id="rjp-1L-WZZ"/>
+                            <constraint firstItem="GQH-mJ-7uf" firstAttribute="centerY" secondItem="4ig-gm-IFa" secondAttribute="centerY" id="tQm-aa-dax"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-795.6521739130435" y="-104.46428571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="yagom" width="167" height="160.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
